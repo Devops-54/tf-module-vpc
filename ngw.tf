@@ -1,6 +1,7 @@
 # Provisions EIP needed for NAT Gateway
 
 resource "aws_eip" "ngw_eip" {
+  domain = "vpc"
 
   tags = {
     Name    = "roboshop-${var.ENV}-ngw-eip"
